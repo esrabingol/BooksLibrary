@@ -1,0 +1,31 @@
+﻿@model List<BooksLibrary.Entities.Concrete.Books>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Published Year</th>
+            <th scope="col">Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.BooksId</th>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.PublishedYear</td>
+                <td>@item.Genre</td>
+               
+            </tr>
+        }
+     
+       
+    </tbody>
+</table>

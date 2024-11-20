@@ -11,5 +11,5 @@ namespace BooksLibrary.Business.Abstract
 	public interface IBooksService :IRepositoryService<Books>
 	{
 
-	}
+    }
 }

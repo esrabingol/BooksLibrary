@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BooksLibrary.Shared.Utilities.Result.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,9 @@ namespace BooksLibrary.Business.Abstract
 {
 	public interface IRepositoryService<T> where T : class
 	{
-		void TInsert(T entity);
-		void TUpdate(T entity);
-		void TDelete(int id);
+        Task<IResult> TInsert(T entity);
+        Task<IResult> TUpdate(T entity);
+        Task<IResult> TDelete(int id);
 		List<T> TGetAll();
 	}
 }
